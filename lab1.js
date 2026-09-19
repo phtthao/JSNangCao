@@ -31,3 +31,28 @@ function sayHello(name) {
 sayHello("An");
 sayHello("Bình");
 sayHello("Chi");
+
+// Bài 5: Hàng tính tổng
+function sum(a, b) {
+  console.log("Tổng:", a + b);
+}
+
+sum(3, 4);
+sum(10, 20);
+
+// Bài 6: Hàm tính tiền
+function calculateTotal(price, quantity) {
+  const total = price * quantity;
+  console.log("Tổng tiền:", total);
+}
+
+calculateTotal(10000, 3);
+calculateTotal(5000, 5);
+
+// Bài 7: Hàm tính điểm trung bình
+function calculateAverage(math, english, javascript) {
+  const average = (math + english + javascript) / 3;
+  console.log("Điểm trung bình:", average);
+}
+
+calculateAverage(8, 7, 9);

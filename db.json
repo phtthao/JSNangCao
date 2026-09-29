@@ -18,5 +18,22 @@
       "email": "hoadv@gmail.com",
       "id": 3
     }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "iPhone 15",
+      "price": 25000000
+    },
+    {
+      "id": 2,
+      "name": "Samsung S25",
+      "price": 22000000
+    },
+    {
+      "id": 3,
+      "name": "Xiaomi 15",
+      "price": 18000000
+    }
   ]
 }

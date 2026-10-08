@@ -40,7 +40,7 @@ document.getElementById("form-edit").addEventListener("submit", (e) => {
     return;
   }
 
-  if (age <= 0) {
+  if (age <= 0 || isNaN(age) || age === "") {
     alert("Tuổi phải lớn hơn 0");
     return;
   }

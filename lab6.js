@@ -9,6 +9,13 @@ const id = new URLSearchParams(location.search).get("id");
 // .catch(() => {
 //   alert("Không tìm thấy sinh viên");
 // });
+function showLoading() {
+  document.getElementById("loading").style.display = "block";
+}
+
+function hideLoading() {
+  document.getElementById("loading").style.display = "none";
+}
 
 async function getStudent() {
   try {
@@ -20,6 +27,8 @@ async function getStudent() {
   } catch (error) {
     console.error(error);
     alert("error.message");
+  } finally {
+    hideLoading();
   }
 }
 

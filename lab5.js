@@ -12,7 +12,7 @@ document.getElementById("form-add").addEventListener("submit", (e) => {
       email,
     })
     .then(() => {
-      location.replace("index.html");
+      window.location.href = "index.html";
       alert("Them thanh cong");
     });
 });

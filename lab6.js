@@ -1,12 +1,29 @@
 const id = new URLSearchParams(location.search).get("id");
 
-axios.get(`http://localhost:3000/students/${id}`).then((res) => {
-  const student = res.data;
-  document.getElementById("name").value = student.name;
-  document.getElementById("age").value = student.age;
-  document.getElementById("email").value = student.email;
-});
+// axios.get(`http://localhost:3000/students/${id}`).then((res) => {
+//   const student = res.data;
+// document.getElementById("name").value = student.name;
+// document.getElementById("age").value = student.age;
+// document.getElementById("email").value = student.email;
+// })
+// .catch(() => {
+//   alert("Không tìm thấy sinh viên");
+// });
 
+async function getStudent() {
+  try {
+    const res = await axios.get(`http://localhost:3000/students/${id}`);
+    console.log(res.data);
+    document.getElementById("name").value = res.data.name;
+    document.getElementById("age").value = res.data.age;
+    document.getElementById("email").value = res.data.email;
+  } catch (error) {
+    console.error(error);
+    alert("error.message");
+  }
+}
+
+getStudent();
 document.getElementById("form-edit").addEventListener("submit", (e) => {
   e.preventDefault();
   const name = document.getElementById("name").value;
@@ -34,6 +51,7 @@ document.getElementById("form-edit").addEventListener("submit", (e) => {
   }
 
   axios.put(`http://localhost:3000/students/${id}`, data).then(() => {
+    window.location.href = "index.html";
     alert("Cập nhật thành công");
   });
 });

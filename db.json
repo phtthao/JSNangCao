@@ -26,15 +26,9 @@
     },
     {
       "name": "Hoàng Công Thế",
-      "age": "23",
+      "age": "22",
       "email": "thehoang@gmail.com",
       "id": "5"
-    },
-    {
-      "name": "Phạm Quang Huy",
-      "age": "22",
-      "email": "huy@gmail.com",
-      "id": "dhy_nGz"
     }
   ],
   "products": [
